@@ -58,7 +58,7 @@ class PisosGuatemala:
                         instrucciones.append(f"Voltear azulejo en la posición ({i+1},{j+1})")
                     else:
                         instrucciones.append(f"Intercambiar azulejos en las posiciones ({i+1},{j+1}) y ({i+1},{j+2})")
-                        # Se asume que se pueden intercambiar azulejos adyacentes horizontalmente
+                        
                         patron_actual[i] = patron_actual[i][:j] + patron_actual[i][j+1] + patron_actual[i][j] + patron_actual[i][j+2:]
         return costo_volteo * len(instrucciones), instrucciones
 
@@ -82,12 +82,19 @@ class PisosGuatemala:
                 codigo_patron = input("Ingrese el código del patrón: ")
                 self.mostrar_patron_graficamente(nombre_piso, codigo_patron)
             elif opcion == '3':
-                " "
+                nombre_piso = input("Ingrese el nombre del piso: ")
+                codigo_patron_actual = input("Ingrese el código del patrón actual: ")
+                codigo_patron_nuevo = input("Ingrese el código del nuevo patrón: ")
+                costo, instrucciones = self.calcular_costo_minimo(nombre_piso, codigo_patron_actual, codigo_patron_nuevo)
+                print(f"El costo mínimo para cambiar el patrón es: {costo} Quetzales")
+                opcion_instrucciones = input("¿Desea ver las instrucciones paso a paso? (s/n): ")
+                if opcion_instrucciones.lower() == 's':
+                    self.mostrar_instrucciones(instrucciones)
             elif opcion == '4':
-                print("¡Hasta luego!")
+                print("fin del programa")
                 break
             else:
-                print("Opción inválida, por favor intente de nuevo.")
+                print("Opción inválida")
 
 if __name__ == "__main__":
     pisos_guatemala = PisosGuatemala()

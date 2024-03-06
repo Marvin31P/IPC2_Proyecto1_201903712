@@ -42,4 +42,18 @@
             </patron>
         </patrones>
     </piso>
+    <piso nombre="04">
+        <R>4</R>
+        <C>5</C>
+        <F>10</F>
+        <S>5</S>
+        <patrones>
+            <patron codigo="cod31">
+                NNBNNBN
+            </patron>
+            <patron codigo="cod32">
+                NBNBNBB
+            </patron>
+        </patrones>
+    </piso>
 </pisosGuatemala>
