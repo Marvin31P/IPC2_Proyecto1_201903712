@@ -48,11 +48,15 @@
         <F>10</F>
         <S>5</S>
         <patrones>
-            <patron codigo="cod31">
+            <patron codigo="cod41">
                 NNBNNBN
             </patron>
-            <patron codigo="cod32">
+            <patron codigo="cod42">
                 NBNBNBB
+            </patron>
+
+            <patron codigo="cod43">
+                NBNBBBB
             </patron>
         </patrones>
     </piso>

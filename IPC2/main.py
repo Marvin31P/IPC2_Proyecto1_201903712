@@ -59,7 +59,7 @@ class PisosGuatemala:
                     else:
                         instrucciones.append(f"Intercambiar azulejos en las posiciones ({i+1},{j+1}) y ({i+1},{j+2})")
                         
-                        patron_actual[i] = patron_actual[i][:j] + patron_actual[i][j+1] + patron_actual[i][j] + patron_actual[i][j+2:]
+                        patron_actual[i] = patron_actual[i][:j] + patron_actual[i][j+1] + patron_actual[i][j] + patron_actual[i][j+2:] + patron_actual[i][:j] + patron_actual[i][j+3] + patron_actual[i][:j] + patron_actual[i][j+4]
         return costo_volteo * len(instrucciones), instrucciones
 
     def mostrar_instrucciones(self, instrucciones):
